@@ -1,0 +1,146 @@
+.header
+    padding-top: 15px
+    padding-bottom: 16px
+    background-color: #fff
+    font-family: 'TT Norms', sans-serif
+    position: sticky
+    top: 0
+    z-index: 4
+    filter: drop-shadow(0px 4px 19px rgba(0, 0, 0, 0.05))
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__menu
+        display: flex
+        padding: 0
+        padding-top: 7px
+        margin: 0
+        list-style-type: none
+        grid-gap: 75px
+        a
+            text-decoration: none
+            font-size: 18px
+            line-height: 143.7%
+            color: #353535
+            &:hover
+                color: #2AB46C
+    &__connect
+        font-size: 16px
+        line-height: 143.7%
+    &__phone
+        font-size: 16px
+        line-height: 143.7%
+        color: #2AB46C
+        display: block
+        text-decoration: none
+    &__mob
+        display: none
+.footer
+    background: #1D1D1D
+    color: #fff
+    padding-top: 83px
+    padding-bottom: 93px
+    overflow: hidden
+    a
+        color: #fff
+        text-decoration: none
+    &__wrap
+        display: flex
+        justify-content: space-between
+        grid-gap: 10px
+    &__menu
+        a
+            display: block
+            margin-bottom: 10px
+            font-size: 18px
+            line-height: 143.7%
+            color: #FFFFFF
+            &:hover
+                color: #2AB46C
+            &.footer__menu-title
+                font-weight: 600
+                margin-bottom: 21px
+    &__copy
+        margin-top: 100px
+.end
+    padding: 40px 0
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__polit
+        font-size: 18px
+        line-height: 129.18%
+        color: #212121
+        text-decoration: none
+        &:hover
+            color: #2AB46C
+    &__soc
+        display: flex
+        align-items: center
+        a
+            margin-left: 15px
+@media(max-width: 1599px)
+    .header
+        &__menu
+            grid-gap: 20px
+@media(max-width: 1199px)
+    .header
+        &__menu
+            grid-gap: 10px
+    .footer
+        &__wrap
+            flex-wrap: wrap
+        &__logo
+            width: 100%
+            margin-bottom: 40px
+@media(max-width: 991px)
+    .header
+        &__connect
+            display: none
+    .footer
+        &__wrap
+            justify-content: flex-start
+            grid-gap: 0
+        &__menu
+            width: 33%
+            margin-bottom: 25px
+@media(max-width: 767px)
+    .header
+        &__menu
+            display: none
+        &__mob
+            display: block
+    .footer
+        padding: 40px 0
+        &__copy
+            margin-top: 40px
+        &__menu
+            width: 50%
+@media(max-width: 575px)
+    .header
+        padding: 10px 0
+        &__logo
+            height: 40px
+            img
+                max-height: 100%
+    .footer
+        &__menu
+            width: 100%
+            a
+                font-size: 16px
+                margin-bottom: 4px
+                &.footer__menu-title
+                    margin-bottom: 10px
+        &__copy
+            margin-top: 25px
+            font-size: 16px
+    .end
+        padding: 15px 0
+        &__polit
+            font-size: 16px
+            display: block
+            margin-bottom: 15px
+        &__wrap
+            display: block
