@@ -1,0 +1,57 @@
+.access
+    padding-top: 54px
+    padding-bottom: 97px
+    background: url(../img/pages-bg.jpg) center top no-repeat
+    background-size: cover
+    &__title
+        margin-bottom: 54px
+        font-weight: bold
+        font-size: 67px
+        line-height: 103.68%
+        text-align: center
+        color: #000000
+        margin-top: 0
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 38px 30px
+    &__block
+        height: 192px
+        position: relative
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+    &__name
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(0deg, #2AB46C, #2AB46C)
+        line-height: 19px
+        color: rgba(255, 255, 255, 0.87)
+        font-size: 12px
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 15px
+        opacity: 0
+        transition: all 0.3s
+    &__block:hover
+        .access__name
+            opacity: 1
+@media(max-width: 991px)
+    .access
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+@media(max-width: 575px)
+    .access
+        padding: 40px 0
+        &__title
+            margin-bottom: 40px
+            font-size: 32px
+            line-height: normal
+        &__wrap
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 20px

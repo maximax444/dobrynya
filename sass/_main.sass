@@ -1,12 +1,15 @@
 .header
-    padding-top: 15px
-    padding-bottom: 16px
+    padding: 12px 0
     background-color: #fff
     font-family: 'TT Norms', sans-serif
     position: sticky
     top: 0
     z-index: 4
     filter: drop-shadow(0px 4px 19px rgba(0, 0, 0, 0.05))
+    &__logo
+        width: 120px
+        img
+            max-width: 100%
     &__wrap
         display: flex
         justify-content: space-between
@@ -17,19 +20,19 @@
         padding-top: 7px
         margin: 0
         list-style-type: none
-        grid-gap: 75px
+        grid-gap: 55px
         a
             text-decoration: none
-            font-size: 18px
+            font-size: 14px
             line-height: 143.7%
             color: #353535
             &:hover
                 color: #2AB46C
     &__connect
-        font-size: 16px
+        font-size: 13px
         line-height: 143.7%
     &__phone
-        font-size: 16px
+        font-size: 13px
         line-height: 143.7%
         color: #2AB46C
         display: block
@@ -39,9 +42,13 @@
 .footer
     background: #1D1D1D
     color: #fff
-    padding-top: 83px
-    padding-bottom: 93px
+    padding-top: 64px
+    padding-bottom: 72px
     overflow: hidden
+    &__logo
+        max-width: 148px
+        img
+            max-width: 100%
     a
         color: #fff
         text-decoration: none
@@ -52,25 +59,26 @@
     &__menu
         a
             display: block
-            margin-bottom: 10px
-            font-size: 18px
+            margin-bottom: 8px
+            font-size: 14px
             line-height: 143.7%
             color: #FFFFFF
             &:hover
                 color: #2AB46C
             &.footer__menu-title
                 font-weight: 600
-                margin-bottom: 21px
+                margin-bottom: 16px
     &__copy
-        margin-top: 100px
+        margin-top: 80px
+        font-size: 14px
 .end
-    padding: 40px 0
+    padding: 25px 0
     &__wrap
         display: flex
         justify-content: space-between
         align-items: center
     &__polit
-        font-size: 18px
+        font-size: 14px
         line-height: 129.18%
         color: #212121
         text-decoration: none
@@ -81,10 +89,8 @@
         align-items: center
         a
             margin-left: 15px
-@media(max-width: 1599px)
-    .header
-        &__menu
-            grid-gap: 20px
+            img
+                max-height: 21px
 @media(max-width: 1199px)
     .header
         &__menu
@@ -103,6 +109,9 @@
         &__wrap
             justify-content: flex-start
             grid-gap: 0
+        &__logo
+            width: 33%
+            max-width: 100%
         &__menu
             width: 33%
             margin-bottom: 25px
@@ -114,6 +123,8 @@
             display: block
     .footer
         padding: 40px 0
+        &__logo
+            width: 50%
         &__copy
             margin-top: 40px
         &__menu
@@ -123,6 +134,7 @@
         padding: 10px 0
         &__logo
             height: 40px
+            width: auto
             img
                 max-height: 100%
     .footer
@@ -135,7 +147,7 @@
                     margin-bottom: 10px
         &__copy
             margin-top: 25px
-            font-size: 16px
+            font-size: 14px
     .end
         padding: 15px 0
         &__polit

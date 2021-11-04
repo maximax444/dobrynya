@@ -1,0 +1,73 @@
+.delivery
+    padding: 90px 0
+    background: url(../img/pages-bg.jpg) center top no-repeat
+    background-size: cover
+    &__title
+        margin-top: 0
+        margin-bottom: 50px
+        font-weight: bold
+        font-size: 67px
+        line-height: 103.68%
+        text-align: center
+        color: #000000
+    &__top
+        display: flex
+        &-block
+            width: 33%
+            padding: 5px 0
+            padding-left: 35px
+            color: rgba(33, 33, 33, 0.7)
+            font-size: 12.3423px
+            line-height: 173.2%
+            text-transform: uppercase
+    &__block
+        display: flex
+        background-color: #fff
+        &-block
+            height: 38px
+            padding-left: 35px
+            display: flex
+            align-items: center
+            padding-right: 15px
+            width: 33%
+            border-right: 1px solid #DFDFDF
+            color: #212121
+            font-size: 14px
+            &:last-child
+                border-right: 0
+        &:nth-child(2n+1)
+            background: #F8F8F8
+    &__table
+        margin-bottom: 38px
+        border: 1px solid #DFDFDF
+    &__btn
+        margin: 0 auto
+@media(max-width: 991px)
+    .delivery
+        &__top, &__block
+            &-block
+                padding-left: 12px
+        &__top
+            &-block
+                font-size: 11px
+@media(max-width: 767px)
+    .delivery
+        &__top
+            width: 760px
+        &__table
+            width: 760px
+            &-wrap
+                overflow-x: scroll
+@media(max-width: 575px)
+    .delivery
+        padding: 40px 0
+        &__title
+            margin-bottom: 30px
+            font-size: 32px
+            line-height: normal
+        &__table
+            width: 780px
+            &-wrap
+                margin-right: -8px
+        &__top
+            width: 780px

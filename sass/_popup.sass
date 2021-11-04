@@ -1,0 +1,131 @@
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 15
+    background: rgba(20, 28, 64, 0.2)
+    backdrop-filter: blur(16px)
+    display: none
+    justify-content: center
+    align-items: flex-start
+    padding: 30px 0
+    overflow-y: scroll
+    &.active
+        display: flex
+.popup
+    position: relative
+    &__close
+        position: absolute
+        top: 45px
+        right: 40px
+        cursor: pointer
+        transition: all 0.3s
+        z-index: 3
+    &-access
+        width: 1200px
+        max-width: 95%
+        background: #FFFFFF
+        padding: 150px 75px
+        padding-bottom: 110px
+        &__wrap
+            display: flex
+            justify-content: space-between
+            grid-gap: 10px
+        &__right
+            width: 370px
+        &__cont
+            width: 570px
+        &__img
+            width: 100%
+            margin-bottom: 25px
+            img
+                width: 100%
+        &__price
+            font-weight: 600
+            font-size: 40px
+            line-height: 103.68%
+            color: #2AB46C
+        &__title
+            font-weight: 600
+            font-size: 24.6847px
+            line-height: 123.7%
+            color: #353535
+            margin-bottom: 42px
+            border-bottom: 2px solid #C4C4C4
+            padding-bottom: 8px
+        &__text
+            line-height: 173.2%
+            color: #212121
+            font-size: 14px
+            margin-top: 0
+            margin-bottom: 50px
+        &__form
+            &-title
+                margin-bottom: 24px
+                font-weight: 600
+                font-size: 14px
+                line-height: 143.7%
+                color: #353535
+            &-small
+                font-size: 10px
+                line-height: 143.7%
+                margin-top: 15px
+                color: #353535
+        form
+            label
+                display: block
+                font-size: 10px
+                line-height: 143.7%
+                color: #353535
+                margin-bottom: 16px
+            input
+                display: block
+                margin-top: 4px
+                background: #FFFFFF
+                border: 1px solid rgba(0, 0, 0, 0.29)
+                width: 100%
+                font-family: Code Next
+                font-size: 12px
+                line-height: 12px
+                padding: 10px 15px
+                &:focus
+                    outline: none
+                    border: 1px solid #2AB46C
+@media(max-width: 991px)
+    .popup
+        &__close
+            top: 15px
+            right: 15px
+            width: 20px
+            height: 20px
+            img
+                max-width: 100%
+        &-access
+            padding: 40px
+            &__wrap
+                display: block
+            &__cont
+                width: 100%
+            &__right
+                margin-top: 40px
+                max-width: 100%
+@media(max-width: 575px)
+    .popup
+        &-access
+            padding: 40px 12px
+            &__title
+                font-size: 18px
+                padding-bottom: 5px
+                margin-bottom: 15px
+            &__text
+                font-size: 13px
+                line-height: normal
+                margin-bottom: 40px
+            &__form
+                &-title
+                    font-size: 13px
+                    margin-bottom: 15px
+            &__price
+                font-size: 28px

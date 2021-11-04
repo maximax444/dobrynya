@@ -1,0 +1,112 @@
+.prices
+    padding-top: 60px
+    padding-bottom: 95px
+    background: url(../img/pages-bg.jpg) center top no-repeat
+    background-size: cover
+    &__title
+        font-weight: bold
+        font-size: 67px
+        line-height: 103.68%
+        text-align: center
+        color: #000000
+        margin-bottom: 35px
+    &__wrap
+        display: flex
+        justify-content: space-between
+        grid-gap: 10px
+    &__img
+        height: 190px
+        margin-bottom: 17px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #F5F5F5
+        transition: all 0.3s
+    &__name
+        margin-bottom: 18px
+        display: block
+        text-align: center
+        font-weight: 600
+        font-size: 18px
+        line-height: 129.18%
+        text-align: center
+        color: #212121
+    &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #2AB46C
+        border: 1px solid #2AB46C
+        height: 47px
+        font-size: 14px
+        line-height: 129.18%
+        color: #FFFFFF
+        transition: all 0.3s
+        &:hover
+            background: #FFFFFF
+            color: #000000
+    &__block
+        text-decoration: none
+        &:hover
+            .prices__img
+                background: #2AB46C
+.models
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 35px 30px
+    &__block
+        width: 100%
+    &__img
+        img
+            max-width: 98%
+    &__name
+        font-size: 19px
+        margin-bottom: 8px
+    &__price
+        font-size: 23px
+        line-height: 129.18%
+        text-align: center
+        display: block
+        color: #212121
+@media(max-width: 1199px)
+    .prices
+        &__wrap
+            flex-wrap: wrap
+            grid-gap: 40px 0px
+            justify-content: center
+        &__block
+            margin: 0 50px
+    .models
+        &__wrap
+            grid-template-columns: repeat(3, 1fr)
+        &__block
+            margin: 0
+@media(max-width: 991px)
+    .prices
+        &__wrap
+            flex-wrap: wrap
+            grid-gap: 40px 0px
+            justify-content: space-between
+        &__block
+            margin: 0
+            max-width: 48%
+    .models
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+        &__block
+            max-width: 100%
+@media(max-width: 575px)
+    .prices
+        padding: 40px 0
+        &__title
+            font-size: 32px
+            line-height: normal
+
+            margin-bottom: 40px
+        &__block
+            width: 100%
+            max-width: 100%
+    .models
+        &__wrap
+            grid-template-columns: 1fr
