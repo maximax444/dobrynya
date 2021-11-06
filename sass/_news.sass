@@ -1,0 +1,79 @@
+.news
+    &__title
+        margin-top: 0
+        margin-bottom: 100px
+        font-weight: bold
+        font-size: 67px
+        line-height: 103.68%
+        text-align: center
+        color: #000000
+    &__block
+        display: flex
+        justify-content: space-between
+        margin-bottom: 60px
+    &__el
+        display: none
+    &__img
+        width: 360px
+        height: 175px
+        max-width: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__cont
+        width: calc(100% - 430px)
+    &__name
+        font-weight: 600
+        font-size: 24px
+        line-height: 123.7%
+        color: #353535
+        padding-bottom: 20px
+        border-bottom: 2px solid #C4C4C4
+        margin-bottom: 24px
+        display: block
+        text-decoration: none
+        &:hover
+            color: #2AB46C
+    &__date
+        font-weight: 600
+        font-size: 18px
+        line-height: 129.18%
+        margin-bottom: 13px
+        color: rgba(33, 33, 33, 0.6)
+    &__descr
+        margin: 0
+        font-size: 14px
+        line-height: 173.2%
+        color: #212121
+    &__more
+        margin: 0 auto
+@media(max-width: 991px)
+    .news
+        &__block
+            display: block
+        &__img
+            display: block
+            margin-bottom: 25px
+        &__cont
+            width: 100%
+@media(max-width: 575px)
+    .news
+        &__title
+            margin-bottom: 40px
+            font-size: 32px
+        &__img
+            margin-bottom: 20px
+        &__name
+            font-size: 22px
+            padding-bottom: 10px
+            margin-bottom: 15px
+        &__date
+            margin-bottom: 15px
+        &__descr
+            font-size: 12px
+        &__block
+            margin-bottom: 40px
+        &__more
+            background-color: #2AB46C
+            color: #fff
