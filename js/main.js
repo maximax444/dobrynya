@@ -43,3 +43,43 @@ $(".news__more").on("click", function (e) {
         $('.news__more').hide();
     }
 });
+
+// form file
+$('.about-reviews__upload-wrap').on('click', function () {
+    $('.about-reviews__upload input').click();
+});
+var inputs = document.querySelectorAll('.about-reviews__upload input');
+Array.prototype.forEach.call(inputs, function (input) {
+    var label = input.nextElementSibling,
+        labelVal = label.innerHTML;
+    input.addEventListener('change', function (e) {
+        var fileName = '';
+        if (this.files && this.files.length > 1)
+            fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+        else
+            fileName = e.target.value.split('\\').pop();
+        if (fileName) {
+            $(".about-reviews__upload span").html(fileName);
+        }
+        else
+            label.innerHTML = labelVal;
+    });
+});
+
+// about niceScroll
+$('.about-reviews__main').niceScroll({
+    cursorcolor: "#2AB46C",
+    cursorwidth: "5px",
+    cursorborder: "0",
+    cursorborderradius: 0,
+    autohidemode: 'leave',
+    background: "rgba(196, 196, 196, 0.2)"
+});
+$('.about-news__wrap').niceScroll({
+    cursorcolor: "#2AB46C",
+    cursorwidth: "5px",
+    cursorborder: "0",
+    cursorborderradius: 0,
+    autohidemode: 'leave',
+    background: "rgba(196, 196, 196, 0.2)"
+});
