@@ -83,3 +83,43 @@ $('.about-news__wrap').niceScroll({
     autohidemode: 'leave',
     background: "rgba(196, 196, 196, 0.2)"
 });
+
+// konf niceScroll
+$('.konf__table-wrap').niceScroll({
+    cursorcolor: "#2AB46C",
+    cursorwidth: "5px",
+    cursorborder: "0",
+    cursorborderradius: 0,
+    autohidemode: 'leave',
+    background: "rgba(196, 196, 196, 0.2)"
+});
+
+// konf slider
+$('.konf__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    slide: '.konf__slide'
+});
+
+// konf tabs
+$('.konf__tabs').on('click', '.konf__tabs-block:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.konf').find('.konf__cont-block').removeClass('active').eq($(this).index()).addClass('active');
+    $(this).closest('.konf').find('.konf__cont-block').eq($(this).index()).find('.konf__slider').slick('reinit');
+});
+
+// konf arrows
+$('.konf .prev').on('click', function () {
+    $(this).closest('.konf__slider').slick('prev');
+});
+$('.konf .next').on('click', function () {
+    $(this).closest('.konf__slider').slick('next');
+});
+
+// konf change main img
+$('.konf__slide').on('click', function () {
+    $(this).closest('.konf__cont-block').find('.konf__img img').attr('src', $(this).find('img').attr('src'));
+});
