@@ -1,5 +1,5 @@
 .main
-    height: calc(100vh - 66px)
+    height: 850px
     &__block
         height: 100%
         position: relative
@@ -51,8 +51,11 @@
         position: absolute
         bottom: 64px
         left: 50%
-        margin-left: -96px
+        margin-left: -140px
         z-index: 2
+        font-size: 16px
+        width: 280px
+        height: 54px
 .home
     &-features
         padding: 115px 0
@@ -471,6 +474,9 @@
     &:hover
         .map-block__city
             display: block
+@media(max-width: 1500px)
+    .main
+        height: 750px
 @media(max-width: 1199px)
     .main
         &__title
