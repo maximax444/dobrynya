@@ -22,6 +22,9 @@
         align-items: center
         background: #F5F5F5
         transition: all 0.3s
+        img
+            max-width: 98%
+            transition: all 0.3s
     &__name
         margin-bottom: 18px
         display: block
@@ -49,7 +52,9 @@
         text-decoration: none
         &:hover
             .prices__img
-                background: #2AB46C
+                background: darken(#F5F5F5, 10)
+                img
+                    transform: scale(1.1)
 .models
     &__wrap
         display: grid
@@ -60,6 +65,7 @@
     &__img
         img
             max-width: 98%
+            transition: all 0.3s
     &__name
         font-size: 19px
         margin-bottom: 8px

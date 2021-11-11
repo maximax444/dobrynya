@@ -7,7 +7,7 @@
     z-index: 4
     filter: drop-shadow(0px 4px 19px rgba(0, 0, 0, 0.05))
     &__logo
-        width: 120px
+        width: 140px
         img
             max-width: 100%
     &__wrap
@@ -39,6 +39,52 @@
         text-decoration: none
     &__mob
         display: none
+    &__lang
+        font-size: 18px
+        line-height: 143.7%
+        color: #353535
+        position: relative
+        &-main
+            display: flex
+            align-items: center
+            padding-right: 21px
+            cursor: pointer
+            position: relative
+            &::after
+                width: 14px
+                height: 7px
+                display: block
+                content: ""
+                background: url('../img/main/header-drop.svg') center no-repeat
+                position: absolute
+                right: 0
+                top: 10px
+                background-size: contain
+            span
+                padding-left: 7px
+            img
+                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.21))
+                width: 17px
+        &-drop
+            cursor: pointer
+            padding: 10px
+            width: calc(100% + 20px)
+            left: -10px
+            position: absolute
+            top: 120%
+            background-color: #fff
+            filter: drop-shadow(0px 4px 19px rgba(0, 0, 0, 0.15))
+            transition: all 0.3s
+            display: none
+            img
+                filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.21))
+                width: 17px
+            span
+                padding-left: 7px
+            &:hover
+                background: #F8F8F8
+            &.active
+                display: block
 .footer
     background: #1D1D1D
     color: #fff

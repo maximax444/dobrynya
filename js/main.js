@@ -1,3 +1,27 @@
+// header drop
+$('.header__lang-main').on('click', function () {
+    $('.header__lang-drop').toggleClass('active');
+});
+$('.header__lang-drop').on('click', function () {
+    var nowText = $('.header__lang-main span').html();
+    var secText = $('.header__lang-drop span').html();
+    var nowImg = $('.header__lang-main img').attr('src');
+    var secImg = $('.header__lang-drop img').attr('src');
+
+    $('.header__lang-main span').html(secText);
+    $('.header__lang-drop span').html(nowText);
+    $('.header__lang-main img').attr('src', secImg);
+    $('.header__lang-drop img').attr('src', nowImg);
+    $('.header__lang-drop').removeClass('active');
+});
+// home media
+$('.home-media__tabs').on('click', 'button:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.home-media').find('.home-media__cont-block').removeClass('active').eq($(this).index()).addClass('active');
+    $(this).closest('.home-media').find('.home-media__cont-block').eq($(this).index()).find('.home-media__slider').slick('reinit');
+});
+
 // Overlays
 $('.access__block').on('click', function (e) {
     e.preventDefault();

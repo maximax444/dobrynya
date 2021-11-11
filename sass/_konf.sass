@@ -150,7 +150,8 @@
         input:checked + .konf__table-sqwrap
             .konf__table-sq
                 border: 1px solid #2AB46C
-                background-color: #2AB46C
+                background: #2AB46C url('../img/check.svg') center no-repeat
+                background-size: 80%
     &__cont
         &-block
             display: none
@@ -193,6 +194,8 @@
         padding-top: 50px
         display: flex
         justify-content: center
+        a
+            margin: 0 10px
     &-last
         &__top
             display: flex
@@ -320,6 +323,11 @@
             margin: 0 5px
         &__next
             padding-top: 20px
+            flex-wrap: wrap
+            a
+                margin: 0
+                display: flex
+                margin-bottom: 10px
         &__tabs
             margin-bottom: 0
             &-block
